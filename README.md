@@ -1,4 +1,4 @@
-# SimpleFOC-Hoverboard-IBT2-Pico
+# SimpleFOC x Hoverboard x IBT2 x Pico
 Examples for implementing SimpleFOC library (simplefoc.com) for driving hoverboard motor with IBT2 modules and Raspberry Pi Pico.
 
 ## Hardware:
