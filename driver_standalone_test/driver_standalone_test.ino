@@ -1,6 +1,9 @@
 /*
   Simple FOC: Standalone driver test for 2 IBT-2 modules.
   Microcontroller: Raspberry Pi Pico.
+  
+  DON'T ATTACH THE MOTOR YET!
+  Just test the output voltage for each phases with multimeter.
 */
 
 #include <SimpleFOC.h>
@@ -27,10 +30,10 @@ BLDCDriver3PWM driver = BLDCDriver3PWM(
 void setup() {
 
   // PWM frequency to be used [Hz]
-  driver.pwm_frequency = 5000;
+  driver.pwm_frequency = 3000;
 
   // Power supply voltage [V]
-  driver.voltage_power_supply = 9;
+  driver.voltage_power_supply = 12;
 
   // Max DC voltage allowed [V]
   driver.voltage_limit = 3;
@@ -46,5 +49,7 @@ void setup() {
 
 void loop() {
   // Check voltages (relative to supply ground) with multimeter on each phases terminal.
+  // If all the voltage readings matched with what value is set here, then it's safe to continue to open-loop test.
+  // driver.setPwm(1, 3, 2); means phase A terminal should output 1 volt, phase B should output 3 volt, and phase C should output 2 volt.
   driver.setPwm(1, 3, 2);
 }
