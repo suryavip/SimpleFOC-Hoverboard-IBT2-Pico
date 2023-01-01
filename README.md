@@ -30,22 +30,24 @@ and add this line after other `#include`:
 
 ## Wiring Connections:
 You can see Raspberry Pi Pico's pinout diagram [here](https://datasheets.raspberrypi.com/pico/Pico-R3-A4-Pinout.pdf).
-| Raspberry Pi Pico | 1st IBT2 | 2nd IBT2 | PSU | Motor |
-| --- | --- | --- | --- | --- |
-| 3V3_OUT | VCC | VCC | | |
-| GND | GND | GND | | |
-| GP12 | R_EN | | | |
-| GP13 | RPWM | | | |
-| GP14 | L_EN | | | |
-| GP15 | LPWM | | | |
-| GP16 | | R_EN | | |
-| GP17 | | RPWM | | |
-| | B+ | B+ | Positive terminal | |
-| | B- | B- | Negative terminal | |
+| Pi Pico | 1st IBT2 | 2nd IBT2 | Power Supply | Motor | AS5600 |
+| --- | --- | --- | --- | --- | --- |
+| 3V3_OUT | VCC | VCC | | | VCC |
+| GND | GND | GND | | | GND |
+| GP0 | | | | | SDA |
+| GP1 | | | | | SCL |
+| GP12 | R_EN |
+| GP13 | RPWM |
+| GP14 | L_EN |
+| GP15 | LPWM |
+| GP16 | | R_EN |
+| GP17 | | RPWM |
+| | B+ | B+ | + terminal |
+| | B- | B- | - terminal |
 | | M+ | | | Phase A |
 | | M- | | | Phase B |
 | | | M+ | | Phase C |
-| | | M- | | |
+| | | M- |
 
 As for now, I haven't continue to close-loop test yet. So the AS5600 magnetic sensor module will be unused until then.
 
