@@ -2,7 +2,7 @@
 Examples for implementing [SimpleFOC library](https://www.simplefoc.com) for driving hoverboard motor with 2x IBT2 modules and Raspberry Pi Pico.
 
 ## Warning:
-Powering Hoverboard motor is involving a lot of power. You can use my code and follow my guide, but at your own risk. Don't proceed until you understand the risk and how to handle it.
+Powering Hoverboard motor is involving a lot of power. You can use my code and follow my guide, but at your own risk. Don't proceed until you understand the risk and how to mitigate and handle it.
 
 Also, this project is still in progress. So far I'm able to make it work with open-loop velocity mode. The goal of this project is close-loop mode for Force Feedback Steering Wheel application.
 
