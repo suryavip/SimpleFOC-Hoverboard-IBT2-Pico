@@ -1,9 +1,9 @@
 # SimpleFOC x Hoverboard x IBT2 x Pico
-Examples for implementing [SimpleFOC library](https://www.simplefoc.com) for driving hoverboard motor with IBT2 modules and Raspberry Pi Pico.
+Examples for implementing [SimpleFOC library](https://www.simplefoc.com) for driving hoverboard motor with 2x IBT2 modules and Raspberry Pi Pico.
 
 ## Hardware:
 - Raspberry Pi Pico.
-- 2pcs of IBT2 H bridge driver module (each module have 2 BTS7960).
+- 2x of IBT2 H bridge driver module (each module have 2x BTS7960).
 - Hoverboard motor.
 - AS5600 magnetic sensor module.
 - 12V power supply. 24V might do better for hoverboard motor.
