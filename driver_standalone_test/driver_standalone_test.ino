@@ -1,7 +1,4 @@
-/*
-  Simple FOC: Standalone driver test for 2 IBT-2 modules.
-  Microcontroller: Raspberry Pi Pico.
-  
+/* 
   DON'T ATTACH THE MOTOR YET!
   Just test the output voltage for each phases with multimeter.
 */
