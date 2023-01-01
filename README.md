@@ -48,6 +48,3 @@ You can see Raspberry Pi Pico's pinout diagram [here](https://datasheets.raspber
 | | M- | | | Phase B |
 | | | M+ | | Phase C |
 | | | M- |
-
-As for now, I haven't continue to close-loop test yet. So the AS5600 magnetic sensor module will be unused until then.
-
