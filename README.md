@@ -15,7 +15,18 @@ Also, this project is still in progress. So far I'm able to make it work with op
 
 ## Software & Libraries:
 - Arduino IDE (at the time of writing, I use version 2.0.3).
+- [Arduino-Pico board library](https://github.com/earlephilhower/arduino-pico) by @earlephilhower.
 - [SimpleFOC library](https://www.simplefoc.com).
+
+## Software Preparation:
+At least on SimpleFOC v2.2.3, there will be compiling errors when using Arduino-Pico board library by @earlephilhower (Something about `pwm_gpio_to_slice_num` is not declared in this scope). To fix that, locate this file
+```
+<your arduino libraries folder>/Simple_FOC/src/drivers/hardware_specific/rp2040_mcu.cpp
+```
+and add this line after other `#include`:
+```cpp
+#include "hardware/pwm.h"
+```
 
 ## Wiring Connections:
 You can see Raspberry Pi Pico's pinout diagram [here](https://datasheets.raspberrypi.com/pico/Pico-R3-A4-Pinout.pdf).
@@ -37,3 +48,4 @@ You can see Raspberry Pi Pico's pinout diagram [here](https://datasheets.raspber
 | | | M- | | |
 
 As for now, I haven't continue to close-loop test yet. So the AS5600 magnetic sensor module will be unused until then.
+
