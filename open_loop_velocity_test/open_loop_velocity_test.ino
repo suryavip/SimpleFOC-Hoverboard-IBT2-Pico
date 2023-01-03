@@ -37,12 +37,10 @@ BLDCDriver3PWM driver = BLDCDriver3PWM(
   PB_EN_PIN,
   PC_EN_PIN);
 
-float target_velocity = 0;
-
 Commander command = Commander(Serial);
 
 void doTarget(char* cmd) {
-  command.scalar(&target_velocity, cmd);
+  command.scalar(&motor.target, cmd);
   echoBack(cmd);
 }
 
@@ -53,7 +51,7 @@ void doLimit(char* cmd) {
 
 void echoBack(char* cmd) {
   Serial.print("Target: ");
-  Serial.print(target_velocity);
+  Serial.print(motor.target);
   Serial.print("; Limit: ");
   Serial.println(motor.voltage_limit);
 }
@@ -65,6 +63,7 @@ void setup() {
   driver.init();
 
   motor.linkDriver(&driver);
+  motor.target = 0;
   motor.voltage_limit = 0;
   motor.torque_controller = TorqueControlType::voltage;
   motor.controller = MotionControlType::velocity_openloop;
@@ -82,6 +81,6 @@ void setup() {
 }
 
 void loop() {
-  motor.move(target_velocity);
+  motor.move();
   command.run();
 }
