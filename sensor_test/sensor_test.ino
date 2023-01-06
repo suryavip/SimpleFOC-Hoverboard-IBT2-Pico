@@ -1,8 +1,8 @@
 #include <SimpleFOC.h>
 
 // Wiring
-pin_size_t MAGNETIC_SENSOR_SDA_PIN = 0;
-pin_size_t MAGNETIC_SENSOR_SCL_PIN = 1;
+const pin_size_t MAGNETIC_SENSOR_SDA_PIN = 0;
+const pin_size_t MAGNETIC_SENSOR_SCL_PIN = 1;
 
 const uint8_t MAGNETIC_SENSOR_ADDRESS = 0x36;
 const uint8_t MAGNETIC_SENSOR_RESOLUTION = 12;
@@ -10,10 +10,10 @@ const uint8_t MAGNETIC_SENSOR_ANGLE_REGISTER_MSB = 0x0C;  // or 0x0E (appear to 
 const uint8_t MAGNETIC_SENSOR_BITS_USED_MSB = 4;
 
 MagneticSensorI2C sensor = MagneticSensorI2C(
-  MAGNETIC_SENSOR_ADDRESS,
-  MAGNETIC_SENSOR_RESOLUTION,
-  MAGNETIC_SENSOR_ANGLE_REGISTER_MSB,
-  MAGNETIC_SENSOR_BITS_USED_MSB);
+                             MAGNETIC_SENSOR_ADDRESS,
+                             MAGNETIC_SENSOR_RESOLUTION,
+                             MAGNETIC_SENSOR_ANGLE_REGISTER_MSB,
+                             MAGNETIC_SENSOR_BITS_USED_MSB);
 
 
 void setup() {
