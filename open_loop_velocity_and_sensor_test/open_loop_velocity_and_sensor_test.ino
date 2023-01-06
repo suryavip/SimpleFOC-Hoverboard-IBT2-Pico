@@ -88,7 +88,6 @@ void setup() {
   motor.torque_controller = TorqueControlType::voltage;
   motor.controller = MotionControlType::velocity_openloop;
   motor.init();
-  motor.initFOC();
 
   // add target command T
   command.add('T', doTarget);
