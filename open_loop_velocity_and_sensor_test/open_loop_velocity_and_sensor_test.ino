@@ -1,14 +1,14 @@
 /*
   Use serial monitor (or something simillar).
-  
+
   To change the voltage limit, enter command: L<voltage_limit>.
   Example: L1
   will change the voltage limit to 1V.
-  
+
   To change the velocity target, enter command: T<velocity>.
   Example: T1
   will target the velocity to 1 rad/sec.
-  
+
   Use command P to print current target and voltage limit.
 */
 
@@ -36,18 +36,18 @@ const uint8_t MAGNETIC_SENSOR_BITS_USED_MSB = 4;
 const int MOTOR_POLE_PAIRS = 15;
 
 MagneticSensorI2C sensor = MagneticSensorI2C(
-  MAGNETIC_SENSOR_ADDRESS,
-  MAGNETIC_SENSOR_RESOLUTION,
-  MAGNETIC_SENSOR_ANGLE_REGISTER_MSB,
-  MAGNETIC_SENSOR_BITS_USED_MSB);
+                             MAGNETIC_SENSOR_ADDRESS,
+                             MAGNETIC_SENSOR_RESOLUTION,
+                             MAGNETIC_SENSOR_ANGLE_REGISTER_MSB,
+                             MAGNETIC_SENSOR_BITS_USED_MSB);
 
 BLDCDriver3PWM driver = BLDCDriver3PWM(
-  PA_PIN,
-  PB_PIN,
-  PC_PIN,
-  PA_EN_PIN,
-  PB_EN_PIN,
-  PC_EN_PIN);
+                          PA_PIN,
+                          PB_PIN,
+                          PC_PIN,
+                          PA_EN_PIN,
+                          PB_EN_PIN,
+                          PC_EN_PIN);
 
 BLDCMotor motor = BLDCMotor(MOTOR_POLE_PAIRS);
 

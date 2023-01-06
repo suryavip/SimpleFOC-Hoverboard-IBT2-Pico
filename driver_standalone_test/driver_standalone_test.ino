@@ -1,4 +1,4 @@
-/* 
+/*
   DON'T ATTACH THE MOTOR YET!
   Just test the output voltage for each phases with multimeter.
 */
@@ -17,12 +17,12 @@ const pin_size_t PC_PIN = 17;     // to RPWM (2nd IBT-2 module)
 // Phase C will be on M+ terminal on 2nd IBT-2 module.
 
 BLDCDriver3PWM driver = BLDCDriver3PWM(
-  PA_PIN,
-  PB_PIN,
-  PC_PIN,
-  PA_EN_PIN,
-  PB_EN_PIN,
-  PC_EN_PIN);
+                          PA_PIN,
+                          PB_PIN,
+                          PC_PIN,
+                          PA_EN_PIN,
+                          PB_EN_PIN,
+                          PC_EN_PIN);
 
 void setup() {
 
