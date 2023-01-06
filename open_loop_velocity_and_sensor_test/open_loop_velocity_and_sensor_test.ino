@@ -114,6 +114,6 @@ void loop1() {
   Serial.print("\t");
   Serial.println(sensor.getVelocity());
 
-  while (millis() < lastEchoSensor + 1000) {
+  while (millis() < lastEchoSensor + 500) {
   }
 }
