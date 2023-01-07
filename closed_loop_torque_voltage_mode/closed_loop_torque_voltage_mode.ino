@@ -69,7 +69,7 @@ void setup()
 
   motor.useMonitoring(Serial);
   //  motor.monitor_variables = _MON_TARGET | _MON_ANGLE | _MON_VEL;
-  //  motor.monitor_downsample = 1000;
+  motor.monitor_downsample = 1000;
 
   _delay(5000);
 
@@ -87,10 +87,11 @@ void loop()
 {
   motor.loopFOC();
   motor.move();
-  //  motor.monitor();
+  motor.monitor();
   command.run();
 }
 
+// can use second core to monitor sensor angle
 //void loop1()
 //{
 //  unsigned long time_now = millis();
